@@ -1,0 +1,67 @@
+GET http://localhost:4004/odata/v4/myservice/address/123
+
+### create data
+POST http://localhost:4004/odata/v4/myservice/address
+Content-Type: application/json
+
+{
+   "Node_key":"12587657",
+"Postal_Code" :"678175876",
+"Street":"sonaroad",
+"Building":"effiltower",
+"Country":"indonesia" 
+}
+
+###updating
+PATCH http://localhost:4004/odata/v4/myservice/businesspartner/6778
+Content-Type: application/json
+
+{    
+    
+     "Email_Address":"jjgjhbj@gmail.com",
+    "Company_Name":"tcs"
+}
+
+###deleting
+# DELETE http://localhost:4004/odata/v4/myservice/address/123
+
+###genric
+PATCH http://localhost:4004/odata/v4/myservice/businesspartner/4565
+Content-Type: application/json
+
+{
+    "Phone_Number":"333288489099"
+}
+
+
+
+
+###custom read
+GET http://localhost:4004/odata/v4/mysrv/readbusinesspartner
+
+###custom updation
+PATCH http://localhost:4004/odata/v4/mysrv/updatebusinesspartner/123456
+Content-Type: application/json
+
+{
+    "Email_Address":"bj@gmai.com",
+    "Company_Name":"ingenx"
+}
+
+###custom delete
+DELETE http://localhost:4004/odata/v4/mysrv/updatebusinesspartner/4565
+
+###custom post
+POST http://localhost:4004/odata/v4/mysrv/insertbusinesspartner
+Content-Type: application/json
+
+{
+    	
+"Node_Key":	"0941987",
+"BP_Role":"pcs56",
+"Email_Address":"pcs67@gmail.com",
+"Phone_Number":"99056780099",
+"Fax_Number":"918809870065",
+"BP_ID":"908pcs90",
+"Company_Name":"techMahindra"
+}

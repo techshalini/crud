@@ -1,0 +1,1 @@
+using mysrv as service from '../../srv/simpleservice';
